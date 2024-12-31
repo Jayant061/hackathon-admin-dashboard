@@ -1,0 +1,30 @@
+<div class="home-container">
+  <div class="home-wrpaper">
+    <div class="text-container">
+      <h1>Accelerate Innovation with Global AI Challenges</h1>
+      <p>
+        AI Challenges at DPhi simulate real-world problems. It is a great place
+        to put your AI/Data Science skills to test on diverse datasets allowing
+        you to foster learning through competitions.
+      </p>
+      <div class="btns">
+        <button appButton="Hello">Create Challenge</button>
+      </div>
+    </div>
+    <div class="img-container">
+      <img [src]="homeImage" alt="" />
+    </div>
+  </div>
+  <div class="marquee-container">
+    @for(item of marqueeData; track item.heading){
+    <app-marquee
+      [image]="item.image"
+      [heading]="item.heading"
+      [description]="item.description"
+      [isLastEl]="$last"
+    ></app-marquee>
+    }
+  </div>
+</div>
+<app-participate-challenge></app-participate-challenge>
+<app-explore-challenge></app-explore-challenge>
