@@ -1,0 +1,35 @@
+<h4>Explore Challenge</h4>
+<div class="input-container" [formGroup]="queryForm">
+    <div class="search-input">
+        <img [src]="searchIcon" alt="">
+        <input type="text" placeholder="Search" formControlName="query" (input)="queryChange()">
+    </div>
+    <div [class]="isFilterModalOpen?'filter open':'filter'" id="filter" >
+        <div class="filter-header" (click)="openFilterModal()">
+            <span>Filter</span>
+            <img [src]="caretIcon" alt="bottom arrow">
+        </div>
+        <div class="status-container">
+            <span>Status</span>
+            @for(status of statuses; track status){
+                <mat-checkbox class="custom-checkbox" [disableRipple]="false" [checked]="isCurrentStatusChecked(status)" (change)="onStatusChange(status)" [value]="status">{{status}}</mat-checkbox>
+            }
+            
+        </div>
+        <div class="level-container">
+            <span>Level</span>
+            @for(level of levels; track level){
+                <mat-checkbox class="custom-checkbox" [disableRipple]="false" [checked]="isCurrentLevelChecked(level)" (change)="onLevelChange(level)" [value]="level">{{level}}</mat-checkbox>
+            }
+            
+        </div>
+    </div>
+    <div class="selected-filter-wrapper">
+        @for(item of cardService.getStatuses(); track item){
+            <app-selected-filter-card [filter]="item"></app-selected-filter-card>
+        }
+        @for(item of cardService.getLevels(); track item){
+            <app-selected-filter-card [filter]="item"></app-selected-filter-card>
+        }
+    </div>
+</div>

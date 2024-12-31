@@ -1,0 +1,10 @@
+<div class="participate-challenge-container">
+    <div class="heading">
+        <span>Why Participate in <span class="special"> AI Challenges?</span></span>
+    </div>
+    <div class="participate-challenge-cards">
+        @for(item of participateChallengesCardsData; track item.heading){
+            <app-participate-challenge-card [image]="item.image" [heading]="item.heading" [description]="item.description"></app-participate-challenge-card>
+        }
+    </div>
+</div>

@@ -1,0 +1,28 @@
+:host{
+    padding: 3.125rem 2.5rem 3.875rem 2rem;
+    width: 48%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 0.25rem;
+    background-color: var(--grayBgc);
+    border-radius: 20px;
+    img{
+        width: 3rem;
+        height: 3rem;
+    }
+    span{
+        font-size: 1.5rem;
+        line-height: 3rem;
+        font-weight: 600;
+
+    }
+    p{
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #64607D;
+    }
+}

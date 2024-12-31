@@ -1,0 +1,21 @@
+:host{
+    padding: 0.75rem 1.25rem;
+    background-color: #F8F9FD7D;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.1s ease-in-out;
+    &:hover{
+        transform: scale(1.1);
+    }
+    span{
+        color: white;
+        font-size: 0.875rem;
+        line-height: 0.875rem;
+    }
+    img{
+        cursor: pointer;
+    }
+}

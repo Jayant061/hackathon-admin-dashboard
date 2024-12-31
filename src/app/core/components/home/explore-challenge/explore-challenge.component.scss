@@ -1,0 +1,117 @@
+// @use '@angular/material' as mat;
+
+:host {
+  padding: 4.5rem 0 6.125rem 15rem;
+  background-color: var(--deepBgc);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  h4 {
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    color: white;
+    padding-bottom: 4rem;
+    text-align: center;
+    width: 100%;
+  }
+  .input-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1.5rem;
+    .search-input {
+      width: 65%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 0 1rem 2.375rem;
+      background-color: #fff;
+      border-radius: 12px;
+      input {
+        flex-grow: 1;
+        border: none;
+        outline: none;
+        font-family: "Inter", sans-serif;
+        &::placeholder {
+          color: #858585;
+        }
+      }
+    }
+    .filter {
+      position: absolute;
+      top: 0;
+      left: calc(65% + 1.5rem);
+      z-index: 10;
+      width: 7.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      height: 3.125rem;
+      border-radius: 12px;
+      transition: 0.3s ease-in-out;
+      .filter-header {
+        padding: 0.75rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.625rem;
+        background-color: #fff;
+        width: 100%;
+        cursor: pointer;
+        span {
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          font-size: 1.125rem;
+          line-height: 1.625rem;
+        }
+        img {
+          transform: rotate(0deg);
+          transition: 0.3s ease-in-out;
+        }
+      }
+      &.open {
+        width: 290px;
+        height: auto;
+        background-color: #fff;
+        .filter-header {
+          width: 100%;
+          img {
+            transform: rotate(180deg);
+          }
+        }
+        .status-container,
+        .level-container {
+          span {
+            margin-bottom: 1.5rem;
+          }
+          width: 100%;
+          padding: 0.75rem 1.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          border-top: 1px solid #ececec;
+          .custom-checkbox {
+            margin-bottom: 1rem;
+            &:last-child {
+              margin-bottom: unset;
+            }
+          }
+        }
+      }
+    }
+    .selected-filter-wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      height: 2.625rem;
+    }
+  }
+}

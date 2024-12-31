@@ -1,0 +1,28 @@
+:host{
+    .participate-challenge-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4.5rem;
+        padding: 5.625rem 10rem 7.6875rem;
+        .heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 1.25rem;
+            gap: 1rem;
+            span.special{
+                color: var(--greenClr);
+            }
+        }
+        .participate-challenge-cards{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem; 
+        }
+    }
+}
